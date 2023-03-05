@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:zigy_assignment/core/models/user/load_user_model.dart';
+import 'package:zigy_assignment/core/services/networking.dart';
 
-import '../../core/common_widgets/custom_app_bar.dart';
-import '../../core/models/models.dart';
+import '../../core/common_widgets/common_widgets.dart';
 
 class LoadUsersScreen extends StatefulWidget {
   const LoadUsersScreen({Key? key}) : super(key: key);
@@ -11,21 +12,40 @@ class LoadUsersScreen extends StatefulWidget {
 }
 
 class LoadUsersScreenState extends State<LoadUsersScreen> {
-  late List<LoadUserModel> user = [];
+  List<LoadUserModel>? users;
 
   @override
   void initState() {
     super.initState();
+    _getData();
+  }
+
+  _getData() async {
+    List<LoadUserModel> response = await Networking().loadUsers();
+    setState(() {});
+    users = response;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'Load a list of users'),
-      body: ListView.builder(
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return Container();
+      body: FutureBuilder(
+        future: _getData(),
+        builder: (context, snapshot) {
+          return users == null
+              ? const LoadingWidget()
+              : ListView.builder(
+                  itemCount: users!.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: UserCard(
+                        userModel: users![index],
+                      ),
+                    );
+                  },
+                );
         },
       ),
     );

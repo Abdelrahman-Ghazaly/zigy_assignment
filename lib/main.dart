@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'features/home/bottom_nav_bar.dart';
-import 'features/load_users/load_users_screen.dart';
 
 void main() {
   runApp(const MyApp());

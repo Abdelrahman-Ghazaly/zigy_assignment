@@ -15,8 +15,8 @@ class Networking {
 
   Future<List<LoadUserModel>> loadUsers() async {
     final http.Response response = await http.get(Uri.parse(kLoadUsersApiUrl));
-    final jsonData = _decodeJson(response.body);
-    final List<LoadUserModel> users = _creaetUsersList(jsonData);
+    final jsonData = await _decodeJson(response.body);
+    final List<LoadUserModel> users = _creaetUsersList(jsonData['data']);
     return users;
   }
 
@@ -24,7 +24,7 @@ class Networking {
     return json.decode(body);
   }
 
-  List<LoadUserModel> _creaetUsersList(Map<String, dynamic> jsonData) {
+  List<LoadUserModel> _creaetUsersList(jsonData) {
     List<LoadUserModel> users = [];
     for (var i = 0; i < jsonData.length; i++) {
       users.add(LoadUserModel.fromMap(jsonData[i]));
