@@ -1,10 +1,10 @@
-class UploadUserOdel {
+class UploadUserModel {
   final String name;
   final String job;
   final String id;
   final String createdAt;
 
-  UploadUserOdel({
+  UploadUserModel({
     required this.name,
     required this.job,
     required this.id,
@@ -18,8 +18,8 @@ class UploadUserOdel {
     };
   }
 
-  factory UploadUserOdel.fromMap(Map<String, dynamic> map) {
-    return UploadUserOdel(
+  factory UploadUserModel.fromMap(Map<String, dynamic> map) {
+    return UploadUserModel(
       name: map['name'] ?? '',
       job: map['job'] ?? '',
       id: map['id'] ?? '',
