@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
-import 'package:zigy_assignment/features/load_users/load_users_screen.dart';
-import 'package:zigy_assignment/features/upload_users/upload_user_screen.dart';
+
+import '../load_users/load_users_screen.dart';
+import '../upload_users/upload_user_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);

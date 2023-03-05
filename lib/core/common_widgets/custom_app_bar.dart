@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/app_constants/app_constants.dart';
+import '../app_constants/app_constants.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   const CustomAppBar({Key? key, required this.title})

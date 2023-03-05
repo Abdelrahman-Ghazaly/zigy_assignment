@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/common_widgets/custom_app_bar.dart';
+
+import '../../core/common_widgets/custom_app_bar.dart';
+import '../../core/models/models.dart';
 
 class LoadUsersScreen extends StatefulWidget {
   const LoadUsersScreen({Key? key}) : super(key: key);
@@ -9,6 +11,13 @@ class LoadUsersScreen extends StatefulWidget {
 }
 
 class LoadUsersScreenState extends State<LoadUsersScreen> {
+  late List<LoadUserModel> user = [];
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

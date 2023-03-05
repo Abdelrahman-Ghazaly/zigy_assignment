@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/common_widgets/custom_app_bar.dart';
+
+import '../../core/common_widgets/custom_app_bar.dart';
 
 class UploadUserScreen extends StatefulWidget {
   const UploadUserScreen({super.key});
