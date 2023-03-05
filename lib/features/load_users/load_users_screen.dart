@@ -14,6 +14,7 @@ class LoadUsersScreenState extends State<LoadUsersScreen> {
     return Scaffold(
       appBar: const CustomAppBar(title: 'Load a list of users'),
       body: ListView.builder(
+        itemCount: 5,
         itemBuilder: (context, index) {
           return Container();
         },
