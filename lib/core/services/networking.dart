@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import '../app_constants/app_constants.dart';
@@ -25,10 +24,6 @@ class Networking {
     return await http.get(Uri.parse(kLoadUsersApiUrl));
   }
 
-  _decodeJson(String body) {
-    return json.decode(body);
-  }
-
   List<LoadUserModel> _creaetUsersList(jsonData) {
     List<LoadUserModel> users = [];
     for (var i = 0; i < jsonData.length; i++) {
@@ -40,14 +35,18 @@ class Networking {
   Future uploadUser(UploadUserModel userModel) async {
     final Map body = userModel.toMap();
     final http.Response response = await _httpPost(body);
-    return response;
+    return _decodeJson(response.body);
   }
 
   _httpPost(Map body) async {
-    await http.post(
+    return await http.post(
       Uri.parse(kUploadUserApiUrl),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(body),
     );
+  }
+
+  _decodeJson(String body) {
+    return json.decode(body);
   }
 }
