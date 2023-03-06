@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/models/user/load_user_model.dart';
-import 'package:zigy_assignment/core/services/networking.dart';
+import '../../core/models/user/load_user_model.dart';
+import '../../core/services/networking.dart';
 
 import '../../core/common_widgets/common_widgets.dart';
 

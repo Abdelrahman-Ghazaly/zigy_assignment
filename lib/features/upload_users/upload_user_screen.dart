@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/app_constants/app_constants.dart';
-import 'package:zigy_assignment/core/common_widgets/common_widgets.dart';
-import 'package:zigy_assignment/core/models/models.dart';
-import 'package:zigy_assignment/core/services/services.dart';
+import '../../core/app_constants/app_constants.dart';
+import '../../core/common_widgets/common_widgets.dart';
+import '../../core/models/models.dart';
+import '../../core/services/services.dart';
 
-import '../../core/common_widgets/custom_app_bar.dart';
 import 'widgets/custom_text_field.dart';
 
 class UploadUserScreen extends StatefulWidget {

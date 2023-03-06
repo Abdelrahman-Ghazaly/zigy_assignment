@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/services/utilities.dart';
+
+import '../services/utilities.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({Key? key}) : super(key: key);

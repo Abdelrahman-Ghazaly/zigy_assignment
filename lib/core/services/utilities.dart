@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' as flutter_material;
-import 'package:zigy_assignment/core/common_widgets/common_widgets.dart';
-import 'package:zigy_assignment/core/models/user/upload_user_model.dart';
+import '../common_widgets/common_widgets.dart';
+import '../models/user/upload_user_model.dart';
 
 class Utilities {
   static final Utilities _utilities = Utilities._internal();

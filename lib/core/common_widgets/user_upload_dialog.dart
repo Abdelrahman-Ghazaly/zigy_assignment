@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/models/models.dart';
-import 'package:zigy_assignment/core/services/services.dart';
+import '../models/models.dart';
+import '../services/services.dart';
 
 import '../app_constants/app_constants.dart';
 

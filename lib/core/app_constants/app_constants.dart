@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zigy_assignment/core/services/services.dart';
+import '../services/services.dart';
 
 const double kAppBarHeight = 50;
 const String kLoadUsersApiUrl = 'https://reqres.in/api/users?page=2';
